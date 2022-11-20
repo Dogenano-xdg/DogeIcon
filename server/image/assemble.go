@@ -249,16 +249,7 @@ func CombineSVG(accessories Accessories) ([]byte, error) {
 	io.WriteString(canvas.Writer, bodyUpper.Doc)
 	canvas.Gend()
 
-	// Add shirt pants
-	if shirtPants.Doc != "" {
-		canvas.Group(fmt.Sprintf("id=\"%s\"", "shirtPants"), "fill=\"none\"")
-		if clr, ok := accessories.AccessoryColors[accessories.ShirtPantsAsset.FileName]; ok {
-			randReplacer := strings.NewReplacer("#62ffaa", clr.ToHTML(true), "#62FFAA", clr.ToHTML(true))
-			shirtPants.Doc = randReplacer.Replace(shirtPants.Doc)
-		}
-		io.WriteString(canvas.Writer, shirtPants.Doc)
-		canvas.Gend()
-	}
+
 
 	// Add misc [above-shirt-pants]
 	if misc.Doc != "" && accessories.MiscAsset.AboveShirtPants {
@@ -366,6 +357,17 @@ func CombineSVG(accessories Accessories) ([]byte, error) {
 	if handRight.Doc != "" {
 		canvas.Group(fmt.Sprintf("id=\"%s\"", "handRight"), "fill=\"none\"")
 		io.WriteString(canvas.Writer, handRight.Doc)
+		canvas.Gend()
+	}
+
+	// Add shirt pants
+	if shirtPants.Doc != "" {
+		canvas.Group(fmt.Sprintf("id=\"%s\"", "shirtPants"), "fill=\"none\"")
+		if clr, ok := accessories.AccessoryColors[accessories.ShirtPantsAsset.FileName]; ok {
+			randReplacer := strings.NewReplacer("#62ffaa", clr.ToHTML(true), "#62FFAA", clr.ToHTML(true))
+			shirtPants.Doc = randReplacer.Replace(shirtPants.Doc)
+		}
+		io.WriteString(canvas.Writer, shirtPants.Doc)
 		canvas.Gend()
 	}
 

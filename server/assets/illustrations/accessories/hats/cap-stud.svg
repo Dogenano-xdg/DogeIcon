@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 4000 4000" viewBox="0 0 4000 4000">
+  <style>
+    .st80{fill:#37474f}
+  </style>
+  <g id="Calque_2">
+    <path d="M1345 911h1429v358H1345z" class="st80"/>
+    <ellipse cx="2059.2" cy="1268.5" class="st80" rx="714.7" ry="165.1"/>
+    <path d="M2016 586 944 858c-38 11-38 42 0 53l1072 272c29 6 57 6 86 0l1072-272c38-11 38-42 0-53L2102 586c-28-8-57-8-86 0z" style="fill:#78909c"/>
+    <path d="m2974 941-953-94c-24-3-52 8-57 22s14 30 38 33l915 88v408c0 16 19 27 47 27 29 0 48-11 48-27V968c0-13-19-25-38-27z" class="st80"/>
+    <ellipse cx="2964.4" cy="1397.6" class="st80" rx="95.3" ry="55"/>
+    <path d="M3107 1480c0 47-142 165-142 165s-143-118-143-165 61-82 142-82 143 35 143 82z" class="st80"/>
+  </g>
+</svg>

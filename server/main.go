@@ -79,12 +79,12 @@ func main() {
 	godotenv.Load()
 	// Setup database conn
 	config := &database.Config{
-		Host:     os.Getenv("DB_HOST"),
-		Port:     os.Getenv("DB_PORT"),
-		Password: os.Getenv("DB_PASS"),
-		User:     os.Getenv("DB_USER"),
-		SSLMode:  os.Getenv("DB_SSLMODE"),
-		DBName:   os.Getenv("DB_NAME"),
+		Host:     "127.0.0.1",
+		Port:     "54322",
+		User:     "postgres",
+		Password: "postgres",
+		SSLMode:  "disable",
+		DBName:   "monkey",
 	}
 	fmt.Println("🏡 Connecting to database...")
 	db, err := database.NewConnection(config)
